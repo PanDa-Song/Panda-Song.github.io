@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="pandasong的博客">
 <meta property="og:description" content="安装Hexo本地电脑中需要提前安装两个需要的程序  -Node.js  -Git Gitwindows电脑从网站上下载安装程序安装到电脑上，由于国内网络的原因，用官网的源下载速度会很慢，因此选择国内的淘宝的镜像下载git。下载好后打开exe文件根据提示进行安装。 Node.js与git一样，下载安装程序到电脑（可以在官网node.js）,与普通的应用程序一样安装即可。 两者安装好后，打开power">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-15T10:51:33.960Z">
+<meta property="og:updated_time" content="2019-03-15T11:03:53.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows7下用Hexo+github建立博客">
 <meta name="twitter:description" content="安装Hexo本地电脑中需要提前安装两个需要的程序  -Node.js  -Git Gitwindows电脑从网站上下载安装程序安装到电脑上，由于国内网络的原因，用官网的源下载速度会很慢，因此选择国内的淘宝的镜像下载git。下载好后打开exe文件根据提示进行安装。 Node.js与git一样，下载安装程序到电脑（可以在官网node.js）,与普通的应用程序一样安装即可。 两者安装好后，打开power">
@@ -109,19 +109,14 @@
 <li><p>添加秘钥到github仓库<br>点击右上角的加号-new repository，repository name即为’yourname.github.io’，其他默认选项即可。<br>点击加号旁边另一个向下箭头，选择setting-SSH and GPG keys，在SSH keys中新建key，将刚刚的’id_rsa.pub’文件中内容复制过来。<br>Git Bash中输入<code>ssh -T git@github.com</code>，测试秘钥添加是否成功，若Hi之后为用户名则说明添加成功。</p>
 </li>
 </ul>
-<h3 id="将hexo和github关联"><a href="#将hexo和github关联" class="headerlink" title="将hexo和github关联"></a>将hexo和github关联</h3><p>进入之前建站创建的Hexo文件夹，找到_config.yml文件（最关键的文件），用编辑器打开进行修改，在末尾进行如下修改。<br>(<code>)
-    deploy: 
-      type: git
-      repository: git@github.com:yourname/yourname.github.io.git
-      branch: master
-(</code>)</p>
+<h3 id="将hexo和github关联"><a href="#将hexo和github关联" class="headerlink" title="将hexo和github关联"></a>将hexo和github关联</h3><p>进入之前建站创建的Hexo文件夹，找到_config.yml文件（最关键的文件），用编辑器打开进行修改，在末尾进行如下修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
 <p>接下来进行博客的部署，用cmd或者Git Bash进入创建博客的文件夹即Hexo，生成并部署到github。<br>  <code>hexo g</code><br>  <code>hexo d</code></p>
 <h1 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h1><p>此时在浏览器输入<a href="https://yourname.github.io/" target="_blank" rel="noopener">https://yourname.github.io/</a> ，即可访问个人博客。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pandasong.cn/2019/03/13/post-title/" data-id="cjt9xzxv70001v4kwy9pr77fn" class="article-share-link">Share</a>
+      <a data-url="http://pandasong.cn/2019/03/13/post-title/" data-id="cjt9yfnze0001vskwqblfqahb" class="article-share-link">Share</a>
       
       
     </footer>
