@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="pandasong的博客">
 <meta property="og:description" content="安装Hexo本地电脑中需要提前安装两个需要的程序  -Node.js  -Git Gitwindows电脑从网站上下载安装程序安装到电脑上，由于国内网络的原因，用官网的源下载速度会很慢，因此选择国内的淘宝的镜像下载git。下载好后打开exe文件根据提示进行安装。 Node.js与git一样，下载安装程序到电脑（可以在官网node.js）,与普通的应用程序一样安装即可。 两者安装好后，打开power">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-15T10:39:16.866Z">
+<meta property="og:updated_time" content="2019-03-15T10:51:33.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows7下用Hexo+github建立博客">
 <meta name="twitter:description" content="安装Hexo本地电脑中需要提前安装两个需要的程序  -Node.js  -Git Gitwindows电脑从网站上下载安装程序安装到电脑上，由于国内网络的原因，用官网的源下载速度会很慢，因此选择国内的淘宝的镜像下载git。下载好后打开exe文件根据提示进行安装。 Node.js与git一样，下载安装程序到电脑（可以在官网node.js）,与普通的应用程序一样安装即可。 两者安装好后，打开power">
@@ -86,19 +86,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>本地电脑中需要提前安装两个需要的程序<br>  -Node.js<br>  -Git</p>
+        <h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>本地电脑中需要提前安装两个需要的程序<br>  -Node.js<br>  -Git</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>windows电脑从网站上下载安装程序安装到电脑上，由于国内网络的原因，用官网的源下载速度会很慢，因此选择国内的淘宝的镜像下载<a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">git</a>。下载好后打开exe文件根据提示进行安装。</p>
 <h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>与git一样，下载安装程序到电脑（可以在官网<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a>）,与普通的应用程序一样安装即可。</p>
-<p>两者安装好后，打开powershell或cmd确认系统是否已经安装成功。</p>
-<ul>
-<li><code>node -v</code></li>
-<li><code>git version</code><br>安装好后进行下一步，安装Hexo。</li>
-</ul>
-<h3 id="安装Hexo-1"><a href="#安装Hexo-1" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p><code>npm install -g hexo-cli</code><br>安装好后即可开始建站。</p>
-<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p><code>hexo init Hexo</code><br>创建名为Hexo的文件夹并存放Hexo建站相关文件<br><code>cd Hexo</code>   # 进入刚刚创建的文件夹</p>
-<p>开始建站：<br><code>hexo generate</code><br>生成静态文件<br><code>hexo server</code><br>启动服务器，使网页在本地生成，默认情况下，地址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>  ，可在本地浏览器中查看。</p>
+<p>两者安装好后，打开powershell或cmd确认系统是否已经安装成功。<br>  <code>node -v</code><br>  <code>git version</code><br>安装好后进行下一步，安装Hexo。</p>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>  <code>npm install -g hexo-cli</code><br>安装好后即可开始建站。</p>
+<h1 id="建立网站"><a href="#建立网站" class="headerlink" title="建立网站"></a>建立网站</h1><p>  <code>hexo init Hexo</code>   # 创建名为Hexo的文件夹并存放Hexo建站相关文件<br>  <code>cd Hexo</code>   # 进入刚刚创建的文件夹</p>
+<p>开始建站：<br>  <code>hexo generate</code><br>生成静态文件：<br>  <code>hexo server</code><br>启动服务器，使网页在本地生成，默认情况下，地址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>  ，可在本地浏览器中查看。</p>
 <p>现在网站已经建立起来，接来下需要借助github使网站能够从Internet访问。</p>
-<h3 id="配置Github与Git"><a href="#配置Github与Git" class="headerlink" title="配置Github与Git"></a>配置Github与Git</h3><ul>
+<h1 id="配置Github与Git"><a href="#配置Github与Git" class="headerlink" title="配置Github与Git"></a>配置Github与Git</h1><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><ul>
 <li><p>打开Git Bash</p>
 </li>
 <li><p>配置name和email<br>输入<code>git config --global user.name&quot;yourname&quot;</code>设置Git的用户名<br>输入<code>git config --global user.email&quot;youremail&quot;</code>设置Git的邮箱</p>
@@ -106,27 +102,26 @@
 <li><p>生成秘钥</p>
 </li>
 </ul>
-<p>在用户目录下创建.ssh文件夹添加秘钥<br><code>ssh-keygen -t rsa -C &quot;yourEmail&quot;</code><br>连续三个回车后，生成秘钥，即.ssh文件夹中的’id_rsa.pub’文件</p>
-<ul>
+<p>在用户目录下创建.ssh文件夹添加秘钥<br>  <code>ssh-keygen -t rsa -C &quot;yourEmail&quot;</code><br>连续三个回车后，生成秘钥，即.ssh文件夹中的’id_rsa.pub’文件</p>
+<h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><ul>
 <li><p>创建github帐号</p>
 </li>
 <li><p>添加秘钥到github仓库<br>点击右上角的加号-new repository，repository name即为’yourname.github.io’，其他默认选项即可。<br>点击加号旁边另一个向下箭头，选择setting-SSH and GPG keys，在SSH keys中新建key，将刚刚的’id_rsa.pub’文件中内容复制过来。<br>Git Bash中输入<code>ssh -T git@github.com</code>，测试秘钥添加是否成功，若Hi之后为用户名则说明添加成功。</p>
 </li>
 </ul>
 <h3 id="将hexo和github关联"><a href="#将hexo和github关联" class="headerlink" title="将hexo和github关联"></a>将hexo和github关联</h3><p>进入之前建站创建的Hexo文件夹，找到_config.yml文件（最关键的文件），用编辑器打开进行修改，在末尾进行如下修改。<br>(<code>)
-deploy: 
-  type: git
-  repository: git@github.com:yourname/yourname.github.io.git
-  branch: master
+    deploy: 
+      type: git
+      repository: git@github.com:yourname/yourname.github.io.git
+      branch: master
 (</code>)</p>
-<p>接下来进行博客的部署，用cmd或者Git Bash进入创建博客的文件夹即Hexo，生成并部署到github。<br><code>hexo g</code><br><code>hexo d</code></p>
-<p>大功告成！</p>
-<p>此时在浏览器输入<a href="https://yourname.github.io/即可访问个人博客。" target="_blank" rel="noopener">https://yourname.github.io/即可访问个人博客。</a></p>
+<p>接下来进行博客的部署，用cmd或者Git Bash进入创建博客的文件夹即Hexo，生成并部署到github。<br>  <code>hexo g</code><br>  <code>hexo d</code></p>
+<h1 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h1><p>此时在浏览器输入<a href="https://yourname.github.io/" target="_blank" rel="noopener">https://yourname.github.io/</a> ，即可访问个人博客。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pandasong.cn/2019/03/13/post-title/" data-id="cjt9xkntv0001pkkwe1f6g0hj" class="article-share-link">Share</a>
+      <a data-url="http://pandasong.cn/2019/03/13/post-title/" data-id="cjt9xzxv70001v4kwy9pr77fn" class="article-share-link">Share</a>
       
       
     </footer>
