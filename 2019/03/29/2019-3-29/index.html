@@ -46,7 +46,7 @@
     
     <title>
         
-            归档 | 
+            centOS7 安装 python | 
         
         pandasong的博客
     </title>
@@ -213,7 +213,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="pandasong的博客">
-    <meta name="msapplication-starturl" content="http://pandasong.cn/archives/">
+    <meta name="msapplication-starturl" content="http://pandasong.cn/2019/03/29/2019-3-29/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="pandasong的博客">
@@ -228,13 +228,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://pandasong.cn/archives/">
+    <meta property="og:url" content="http://pandasong.cn/2019/03/29/2019-3-29/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档 | pandasong的博客">
+    <meta property="og:title" content="centOS7 安装 python | pandasong的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
     
 
+    
+        <meta property="article:published_time" content="Fri Mar 29 2019 18:23:34 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 29 2019 19:07:18 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,13 +245,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://pandasong.cn/archives/index.html">
+        <link rel="canonical" href="http://pandasong.cn/2019/03/29/2019-3-29/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://pandasong.cn/2019/03/29/2019-3-29/index.html",
+    "headline": "centOS7 安装 python",
+    "datePublished": "Fri Mar 29 2019 18:23:34 GMT+0800",
+    "dateModified": "Fri Mar 29 2019 19:07:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "PanDasong",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "pandasong的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -282,205 +315,216 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-下载"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-解压安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 解压安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-编译"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 编译</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-建立python3软链，并将python3加入PATH"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 建立python3软链，并将python3加入PATH</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-安装完成"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 安装完成</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/29/2019-3-29/">centOS7 安装 python</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            1. 下载...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/29/2019-3-29/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="PanDasong's avatar">
-            </div>
-            <div>
-                <strong>PanDasong</strong>
-                <span>3月 29, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/13/post-title/">windows7下用Hexo+github建立博客</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            安装Hex...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/13/post-title/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="PanDasong's avatar">
-            </div>
-            <div>
-                <strong>PanDasong</strong>
-                <span>3月 13, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/13/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/13/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="PanDasong's avatar">
-            </div>
-            <div>
-                <strong>PanDasong</strong>
-                <span>3月 13, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                centOS7 安装 python
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>PanDasong</strong>
+        <span>3月 29, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=centOS7 安装 python&url=http://pandasong.cn/2019/03/29/2019-3-29/index.html&pic=http://pandasong.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=centOS7 安装 python&url=http://pandasong.cn/2019/03/29/2019-3-29/index.html&via=PanDasong" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://pandasong.cn/2019/03/29/2019-3-29/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://pandasong.cn/2019/03/29/2019-3-29/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p>官网 <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a> ，选择source code版本下载到linux本地</p>
+<h3 id="2-解压安装"><a href="#2-解压安装" class="headerlink" title="2. 解压安装"></a>2. 解压安装</h3><p>先建立安装目录<br><code>#mkdir -p /usr/local/python3</code> (用root身份)</p>
+<p>将刚刚下载的python的tar文件解压到此<br><code>#tar -zxvf Python-3.7.3.tgz</code></p>
+<h3 id="3-编译"><a href="#3-编译" class="headerlink" title="3. 编译"></a>3. 编译</h3><p>进入解压后的目录<br><code>#cd Python-3.7.3</code><br>编译安装前安装一个包，否则pip的安装会报错<br><code>#yum install libffi-devel -y</code><br>编译安装<br><code>#.configure --prefix=/usr/local/python3</code><br><code>#make</code><br><code>#make install</code></p>
+<h3 id="4-建立python3软链，并将python3加入PATH"><a href="#4-建立python3软链，并将python3加入PATH" class="headerlink" title="4. 建立python3软链，并将python3加入PATH"></a>4. 建立python3软链，并将python3加入PATH</h3><p>建立python3软链<br><code>#ln -s /usr/local/python3/bin/python3 /usr/bin/python3</code><br>用vim修改PATH文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># vim ~/.bash_profile</span><br><span class="line">(以下是文件内容)</span><br><span class="line"># .bash_profile</span><br><span class="line"># Get the aliases and functions</span><br><span class="line">if [ -f ~/.bashrc ]; then</span><br><span class="line">. ~/.bashrc</span><br><span class="line">fi</span><br><span class="line"># User specific environment and startup programs</span><br><span class="line">PATH=$PATH:$HOME/bin==:/usr/local/python3/bin==</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure></p>
+<p>执行如下命令使其生效<br><code>source ~/.bash_profile</code></p>
+<h3 id="5-安装完成"><a href="#5-安装完成" class="headerlink" title="5. 安装完成"></a>5. 安装完成</h3><p>检查安装情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#python3 -V</span><br><span class="line">python-3.7.3</span><br><span class="line">#pip3 -V</span><br><span class="line">pip-19.0.3  from ...</span><br></pre></td></tr></table></figure></p>
+<p>但是，由于linux系统安装是自带有python2，所以即使此时python3已经安装完毕，在终端输入python仍然会进入的是系统自带的python2，只有输入python3才能进入python3编译器，因此为了之后使用的方便，可以适当的建立软链接来改善。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#ln -s /usr/local/python3/bin/python3 /usr/bin/python</span><br><span class="line"># ln -s /usr/local/python3/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/03/13/post-title/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
