@@ -84,6 +84,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -435,35 +440,23 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=算法入门&url=http://pandasong.cn/2019/05/07/算法入门/index.html&via=PanDasong" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://pandasong.cn/2019/05/07/算法入门/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
 
     <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://pandasong.cn/2019/05/07/算法入门/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
     
 
     <!-- Share LinkedIn -->
     
 
     <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=算法入门&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/05/07/算法入门/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
     
 
     <!-- Share Telegram -->
@@ -479,17 +472,58 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="算法入门"><a href="#算法入门" class="headerlink" title="算法入门"></a>算法入门</h1><p>参考书：《算法图解》</p>
-<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(list, item)</span>:</span></span><br><span class="line">    low = <span class="number">0</span></span><br><span class="line">    high = len(list) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> low &lt;= high:</span><br><span class="line">        mid = int((low + high) / <span class="number">2</span>)</span><br><span class="line">        guess = list[mid]</span><br><span class="line">        <span class="keyword">if</span> guess == item:</span><br><span class="line">            <span class="keyword">return</span> guess</span><br><span class="line">        <span class="keyword">elif</span> guess &lt; item:</span><br><span class="line">            low = mid + <span class="number">1</span> </span><br><span class="line">        <span class="keyword">elif</span> guess &gt; item:</span><br><span class="line">            high = mid - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">my_list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">print(binary_search(my_list, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><pre><code class="python">def binary_search(list, item):
+    low = 0
+    high = len(list) - 1
+    while low &lt;= high:
+        mid = int((low + high) / 2)
+        guess = list[mid]
+        if guess == item:
+            return guess
+        elif guess &lt; item:
+            low = mid + 1 
+        elif guess &gt; item:
+            high = mid - 1
+    return None
+
+my_list = [1,2,3,4,5]
+
+print(binary_search(my_list, 1))
+</code></pre>
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="数组和链表"><a href="#数组和链表" class="headerlink" title="数组和链表"></a>数组和链表</h3><p>多项数据存储到计算机存储地址时的方式</p>
 <ul>
 <li>数组：数据位置是连在一起的</li>
 <li>链表：数据位置不必连续，后一个数据的地址存储在前一个数据中</li>
 </ul>
 <h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>遍历整个列表，找出排序第一的元素放到新列表中，进行n次遍历，得到的新列表就是排序后的列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findSmallest</span><span class="params">(arr)</span>:</span></span><br><span class="line">    smallest = arr[<span class="number">0</span>]</span><br><span class="line">    smallest_index = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(arr)):</span><br><span class="line">        <span class="keyword">if</span> arr[i] &lt; smallest:</span><br><span class="line">            smallest = arr[i]</span><br><span class="line">            smallest_index = i</span><br><span class="line">    <span class="keyword">return</span> smallest_index</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">selectionSort</span><span class="params">(arr)</span>:</span></span><br><span class="line">    newArr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(arr)):</span><br><span class="line">        smallest = findSmallest(arr)</span><br><span class="line">        newArr.append(arr.pop(smallest))</span><br><span class="line">    <span class="keyword">return</span> newArr</span><br><span class="line"></span><br><span class="line">print(selectionSort([<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">10</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code class="python">def findSmallest(arr):
+    smallest = arr[0]
+    smallest_index = 0
+    for i in range(1,len(arr)):
+        if arr[i] &lt; smallest:
+            smallest = arr[i]
+            smallest_index = i
+    return smallest_index
+
+
+def selectionSort(arr):
+    newArr = []
+    for i in range(len(arr)):
+        smallest = findSmallest(arr)
+        newArr.append(arr.pop(smallest))
+    return newArr
+
+print(selectionSort([5,3,6,2,10]))
+</code></pre>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><ul>
 <li>基线条件(base case):使函数不再调用自己</li>
-<li>递归条件(recursive case)：使函数调用自己<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countdown</span><span class="params">(i)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> i</span><br><span class="line">    <span class="keyword">if</span> i &lt;= <span class="number">1</span>: <span class="comment">#基线条件</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">else</span>:      <span class="comment">#递归条件</span></span><br><span class="line">    countdown(i - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<li>递归条件(recursive case)：使函数调用自己<pre><code class="python">def countdown(i):
+  print i
+  if i &lt;= 1: #基线条件
+      return
+  else:      #递归条件
+  countdown(i - 1)
+</code></pre>
 </li>
 </ul>
 <h3 id="栈-stack"><a href="#栈-stack" class="headerlink" title="栈 (stack)"></a>栈 (stack)</h3><p>#TODO</p>
@@ -584,7 +618,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="panda.song749@gmail.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -669,13 +703,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -859,6 +886,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -869,6 +902,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>

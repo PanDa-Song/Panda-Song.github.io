@@ -84,6 +84,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -237,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Dec 30 2019 15:44:33 GMT-0800">
-        <meta property="article:modified_time" content="Wed Jan 01 2020 21:32:45 GMT-0800">
+        <meta property="article:modified_time" content="Thu Jan 02 2020 14:56:41 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,7 +265,7 @@
     "mainEntityOfPage": "http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html",
     "headline": "Web-develop-Backend",
     "datePublished": "Mon Dec 30 2019 15:44:33 GMT-0800",
-    "dateModified": "Wed Jan 01 2020 21:32:45 GMT-0800",
+    "dateModified": "Thu Jan 02 2020 14:56:41 GMT-0800",
     "author": {
         "@type": "Person",
         "name": "PanDasong",
@@ -435,35 +440,23 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Web-develop-Backend&url=http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html&via=PanDasong" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
 
     <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
     
 
     <!-- Share LinkedIn -->
     
 
     <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=Web-develop-Backend&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
     
 
     <!-- Share Telegram -->
@@ -535,7 +528,16 @@
 <li>TODO</li>
 </ul>
 </li>
-<li>Typical Syntax<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">"/"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>&#123;</span><br><span class="line">    res.send(<span class="string">"..."</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(port, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;);</span><br></pre></td></tr></table></figure>
+<li><p>Typical Syntax</p>
+<pre><code class="JavaScript">var express = require(&quot;express&quot;);
+var app = express();
+
+app.get(&quot;/&quot;, function(req, res){
+  res.send(&quot;...&quot;);
+});
+
+app.listen(port, function(){...});
+</code></pre>
 </li>
 </ul>
 </li>
@@ -544,6 +546,20 @@
 <li>URL + “/…”</li>
 <li>“*”</li>
 <li>Route Parameter<br><br>  <code>app.get(&quot;/r/:subtitle&quot;, ...)</code></li>
+</ul>
+</li>
+<li><p>EJS files</p>
+<ul>
+<li>writing HTML file with JavaScript</li>
+<li><code>res.render(&quot;xxx.ejs&quot;);</code></li>
+<li><p>The ejs file being like a template. <br>eg.</p>
+<pre><code>// app.js
+res.render(&quot;example.ejs&quot;, {InputVar: xxx});
+
+// example.ejs
+&lt;p&gt;This is just example for &lt;%= (Writing JS here) InputVar %&gt;&lt;\p&gt;
+</code></pre><p>As shown the <code>&lt;%= %&gt;</code> can be regarded as template so that make the html file <strong>Dynamic</strong></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -637,7 +653,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="panda.song749@gmail.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -722,13 +738,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -912,6 +921,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -922,6 +937,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>

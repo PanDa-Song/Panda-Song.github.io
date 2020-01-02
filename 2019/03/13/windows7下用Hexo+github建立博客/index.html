@@ -84,6 +84,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -435,35 +440,23 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=windows7下用Hexo+github建立博客&url=http://pandasong.cn/2019/03/13/windows7下用Hexo+github建立博客/index.html&via=PanDasong" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://pandasong.cn/2019/03/13/windows7下用Hexo+github建立博客/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
 
     <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://pandasong.cn/2019/03/13/windows7下用Hexo+github建立博客/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
     
 
     <!-- Share LinkedIn -->
     
 
     <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=windows7下用Hexo+github建立博客&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/03/13/windows7下用Hexo+github建立博客/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
     
 
     <!-- Share Telegram -->
@@ -501,8 +494,12 @@
 <li><p>添加秘钥到github仓库<br>点击右上角的加号-new repository，repository name即为’yourname.github.io’，其他默认选项即可。<br>点击加号旁边另一个向下箭头，选择setting-SSH and GPG keys，在SSH keys中新建key，将刚刚的’id_rsa.pub’文件中内容复制过来。<br>Git Bash中输入<code>ssh -T git@github.com</code>，测试秘钥添加是否成功，若Hi之后为用户名则说明添加成功。</p>
 </li>
 </ul>
-<h3 id="将hexo和github关联"><a href="#将hexo和github关联" class="headerlink" title="将hexo和github关联"></a>将hexo和github关联</h3><p>进入之前建站创建的Hexo文件夹，找到_config.yml文件（最关键的文件），用编辑器打开进行修改，在末尾进行如下修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<p>接下来进行博客的部署，用cmd或者Git Bash进入创建博客的文件夹即Hexo，生成并部署到github。</p><p><br>  <code>hexo g</code></p><p><br>  <code>hexo d</code></p>
+<h3 id="将hexo和github关联"><a href="#将hexo和github关联" class="headerlink" title="将hexo和github关联"></a>将hexo和github关联</h3><p>进入之前建站创建的Hexo文件夹，找到_config.yml文件（最关键的文件），用编辑器打开进行修改，在末尾进行如下修改。</p>
+<pre><code>    deploy: 
+      type: git
+      repository: git@github.com:yourname/yourname.github.io.git
+      branch: master
+</code></pre><p>接下来进行博客的部署，用cmd或者Git Bash进入创建博客的文件夹即Hexo，生成并部署到github。</p><p><br>  <code>hexo g</code></p><p><br>  <code>hexo d</code></p>
 <h1 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h1><p>此时在浏览器输入<a href="https://yourname.github.io/" target="_blank" rel="noopener">https://yourname.github.io/</a> ，即可访问个人博客。</p>
 <p>Reference:<br>1.<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a></p><p><br>2.<a href="https://blog.csdn.net/f2764052703/article/details/86596957" target="_blank" rel="noopener">CSDN博客–贪吃小明</a></p>
 
@@ -587,7 +584,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="panda.song749@gmail.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -672,13 +669,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -862,6 +852,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -872,6 +868,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>

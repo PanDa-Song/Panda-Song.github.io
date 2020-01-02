@@ -84,6 +84,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -435,35 +440,23 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=centos7 安装 python3.7&url=http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html&via=PanDasong" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
 
     <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
     
 
     <!-- Share LinkedIn -->
     
 
     <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=centos7 安装 python3.7&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
     
 
     <!-- Share Telegram -->
@@ -482,12 +475,31 @@
 <h3 id="2-解压安装"><a href="#2-解压安装" class="headerlink" title="2. 解压安装"></a>2. 解压安装</h3><p>先建立安装目录<br><code>#mkdir -p /usr/local/python3</code> (用root身份)</p>
 <p>将刚刚下载的python的tar文件解压到此<br><code>#tar -zxvf Python-3.7.3.tgz</code></p>
 <h3 id="3-编译"><a href="#3-编译" class="headerlink" title="3. 编译"></a>3. 编译</h3><p>进入解压后的目录<br><code>#cd Python-3.7.3</code><br>编译安装前安装一个包，否则pip的安装会报错<br><code>#yum install libffi-devel -y</code><br>编译安装<br><code>#.configure --prefix=/usr/local/python3</code><br><code>#make</code><br><code>#make install</code></p>
-<h3 id="4-建立python3软链，并将python3加入PATH"><a href="#4-建立python3软链，并将python3加入PATH" class="headerlink" title="4. 建立python3软链，并将python3加入PATH"></a>4. 建立python3软链，并将python3加入PATH</h3><p>建立python3软链<br><code>#ln -s /usr/local/python3/bin/python3 /usr/bin/python3</code><br>用vim修改PATH文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim ~/.bash_profile</span></span><br><span class="line">(以下是文件内容)</span><br><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="comment"># Get the aliases and functions</span></span><br><span class="line"><span class="keyword">if</span> [ -f ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">. ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="comment"># User specific environment and startup programs</span></span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/bin:/usr/<span class="built_in">local</span>/python3/bin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-建立python3软链，并将python3加入PATH"><a href="#4-建立python3软链，并将python3加入PATH" class="headerlink" title="4. 建立python3软链，并将python3加入PATH"></a>4. 建立python3软链，并将python3加入PATH</h3><p>建立python3软链<br><code>#ln -s /usr/local/python3/bin/python3 /usr/bin/python3</code><br>用vim修改PATH文件</p>
+<pre><code class="bash"># vim ~/.bash_profile
+(以下是文件内容)
+# .bash_profile
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+. ~/.bashrc
+fi
+# User specific environment and startup programs
+PATH=$PATH:$HOME/bin:/usr/local/python3/bin
+export PATH
+</code></pre>
 <p>执行如下命令使其生效<br><code>#source ~/.bash_profile</code></p>
-<h3 id="5-安装完成"><a href="#5-安装完成" class="headerlink" title="5. 安装完成"></a>5. 安装完成</h3><p>检查安装情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#python3 -V</span><br><span class="line">python-3.7.3</span><br><span class="line">#pip3 -V</span><br><span class="line">pip-19.0.3  from ...</span><br></pre></td></tr></table></figure></p>
-<p>但是，由于linux系统安装是自带有python2，所以即使此时python3已经安装完毕，在终端输入python仍然会进入的是系统自带的python2，只有输入python3才能进入python3编译器，因此为了之后使用的方便，可以适当的建立软链接来改善。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#ln -s /usr/local/python3/bin/python3 /usr/bin/python</span><br><span class="line"># ln -s /usr/local/python3/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure></p>
-<p>改完之后，由于linux下yum系统借助的是自带的python，所以改成3.7后会导致yum无法正常使用。需要进行修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#vim /usr/bin/yum</span><br><span class="line">修改第一行Python为Python2.7</span><br></pre></td></tr></table></figure></p>
-<p>Reference：</p>
+<h3 id="5-安装完成"><a href="#5-安装完成" class="headerlink" title="5. 安装完成"></a>5. 安装完成</h3><p>检查安装情况</p>
+<pre><code>#python3 -V
+python-3.7.3
+#pip3 -V
+pip-19.0.3  from ...
+</code></pre><p>但是，由于linux系统安装是自带有python2，所以即使此时python3已经安装完毕，在终端输入python仍然会进入的是系统自带的python2，只有输入python3才能进入python3编译器，因此为了之后使用的方便，可以适当的建立软链接来改善。</p>
+<pre><code>#ln -s /usr/local/python3/bin/python3 /usr/bin/python
+# ln -s /usr/local/python3/bin/pip3 /usr/bin/pip
+</code></pre><p>改完之后，由于linux下yum系统借助的是自带的python，所以改成3.7后会导致yum无法正常使用。需要进行修改如下：</p>
+<pre><code>#vim /usr/bin/yum
+修改第一行Python为Python2.7
+</code></pre><p>Reference：</p>
 <ol>
 <li><a href="http://www.cnblogs.com/kimyeee/p/7250560.html" target="_blank" rel="noopener">博客园–_至尊宝</a></li>
 <li><a href="https://blog.csdn.net/qq_36416904/article/details/79316972" target="_blank" rel="noopener">CSDN博客–海棠未满</a></li>
@@ -582,7 +594,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="panda.song749@gmail.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -667,13 +679,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -857,6 +862,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -867,6 +878,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>
