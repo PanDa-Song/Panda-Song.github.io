@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Dec 30 2019 15:44:33 GMT-0800">
-        <meta property="article:modified_time" content="Thu Jan 02 2020 14:56:41 GMT-0800">
+        <meta property="article:modified_time" content="Thu Jan 02 2020 16:54:32 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html",
     "headline": "Web-develop-Backend",
     "datePublished": "Mon Dec 30 2019 15:44:33 GMT-0800",
-    "dateModified": "Thu Jan 02 2020 14:56:41 GMT-0800",
+    "dateModified": "Thu Jan 02 2020 16:54:32 GMT-0800",
     "author": {
         "@type": "Person",
         "name": "PanDasong",
@@ -553,12 +553,17 @@ app.listen(port, function(){...});
 <li>writing HTML file with JavaScript</li>
 <li><code>res.render(&quot;xxx.ejs&quot;);</code></li>
 <li><p>The ejs file being like a template. <br>eg.</p>
-<pre><code>// app.js
-res.render(&quot;example.ejs&quot;, {InputVar: xxx});
+<pre><code>  // app.js
+  res.render(&quot;example.ejs&quot;, {InputVar: xxx});
 
-// example.ejs
-&lt;p&gt;This is just example for &lt;%= (Writing JS here) InputVar %&gt;&lt;\p&gt;
-</code></pre><p>As shown the <code>&lt;%= %&gt;</code> can be regarded as template so that make the html file <strong>Dynamic</strong></p>
+  // example.ejs
+  &lt;p&gt;This is just example for &lt;%= (Writing JS here) InputVar %&gt;&lt;\p&gt;
+</code></pre><p>  As shown the <code>&lt;%= %&gt;</code> can be regarded as template so that make the html file <strong>Dynamic</strong></p>
+</li>
+<li><ol>
+<li><code>&lt;%= %&gt;</code></li>
+<li><code>&lt;%  %&gt;</code></li>
+</ol>
 </li>
 </ul>
 </li>
