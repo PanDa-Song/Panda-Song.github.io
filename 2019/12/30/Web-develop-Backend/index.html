@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Dec 30 2019 15:44:33 GMT-0800">
-        <meta property="article:modified_time" content="Thu Jan 02 2020 16:54:32 GMT-0800">
+        <meta property="article:modified_time" content="Fri Jan 03 2020 21:58:20 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html",
     "headline": "Web-develop-Backend",
     "datePublished": "Mon Dec 30 2019 15:44:33 GMT-0800",
-    "dateModified": "Thu Jan 02 2020 16:54:32 GMT-0800",
+    "dateModified": "Fri Jan 03 2020 21:58:20 GMT-0800",
     "author": {
         "@type": "Person",
         "name": "PanDasong",
@@ -348,7 +348,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-Backend-Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">1 - Backend Intro</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-Node-JS"><span class="post-toc-number">2.</span> <span class="post-toc-text">2 - Node JS</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-Express"><span class="post-toc-number">3.</span> <span class="post-toc-text">3 - Express</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-Backend-Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">1 - Backend Intro</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-Node-JS"><span class="post-toc-number">2.</span> <span class="post-toc-text">2 - Node JS</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-Express"><span class="post-toc-number">3.</span> <span class="post-toc-text">3 - Express</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#API"><span class="post-toc-number">4.</span> <span class="post-toc-text">API</span></a></li></ol>
     </ul>
     
 
@@ -493,14 +493,18 @@
 <h1 id="2-Node-JS"><a href="#2-Node-JS" class="headerlink" title="2 - Node JS"></a>2 - Node JS</h1><ul>
 <li><p>Definition</p>
 <ul>
-<li>Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.</li>
-<li>It makes it possible to write JavaScript on Backend (Server side)</li>
+<li><p>Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.</p>
+</li>
+<li><p>It makes it possible to write JavaScript on Backend (Server side)</p>
+</li>
 </ul>
 </li>
 <li><p>Reason to use it </p>
 <ul>
-<li>popular</li>
-<li>JavaScipt (which means no need to learn another language)</li>
+<li><p>popular</p>
+</li>
+<li><p>JavaScipt (which means no need to learn another language)</p>
+</li>
 </ul>
 </li>
 <li><p>run a file with node</p>
@@ -510,21 +514,29 @@
 </li>
 <li><p>NPM</p>
 <ul>
-<li>the Node package manager for JavaScript</li>
-<li>for import packages built by others</li>
-<li><code>npm install</code> to install a package</li>
-<li><code>require()</code> to include package in js file</li>
+<li><p>the Node package manager for JavaScript</p>
+</li>
+<li><p>for import packages built by others</p>
+</li>
+<li><p><code>npm install</code> to install a package and <code>-- save</code> after the package name make it into package.json</p>
+</li>
+<li><p><code>require()</code> to include package in JS file</p>
+</li>
 </ul>
 </li>
 </ul>
 <h1 id="3-Express"><a href="#3-Express" class="headerlink" title="3 - Express"></a>3 - Express</h1><ul>
 <li><p>Introduction</p>
 <ul>
-<li>Framework vs. Library<ul>
+<li><p><code>npm i express --save</code></p>
+</li>
+<li><p>Framework vs. Library</p>
+<ul>
 <li>framwork is IOC (inversion of Control)</li>
 </ul>
 </li>
-<li>Definition<ul>
+<li><p>Definition</p>
+<ul>
 <li>TODO</li>
 </ul>
 </li>
@@ -543,15 +555,26 @@ app.listen(port, function(){...});
 </li>
 <li><p>Route</p>
 <ul>
-<li>URL + “/…”</li>
-<li>“*”</li>
-<li>Route Parameter<br><br>  <code>app.get(&quot;/r/:subtitle&quot;, ...)</code></li>
+<li><p>URL + “/…”</p>
+</li>
+<li><p>“*”</p>
+</li>
+<li><p>Route Parameter</p>
+<pre><code>  app.get(&quot;/r/:subtitle&quot;, ...)
+</code></pre></li>
+<li><p>To use the parameter</p>
+<pre><code>  var xxx = req.params.xxx;
+</code></pre></li>
 </ul>
 </li>
-<li><p>EJS files</p>
+<li><p>EJS </p>
 <ul>
-<li>writing HTML file with JavaScript</li>
-<li><code>res.render(&quot;xxx.ejs&quot;);</code></li>
+<li><p><code>npm i ejs --save</code></p>
+</li>
+<li><p>writing HTML file with JavaScript</p>
+</li>
+<li><p><code>res.render(&quot;xxx.ejs&quot;);</code><br><br>  To simplify this sentence, using<br>  <code>app.set(&quot;view engine&quot;, &quot;ejs&quot;)</code> in app.js, then it can be written as <code>res.render(&quot;xxx&quot;);</code></p>
+</li>
 <li><p>The ejs file being like a template. <br>eg.</p>
 <pre><code>  // app.js
   res.render(&quot;example.ejs&quot;, {InputVar: xxx});
@@ -561,9 +584,83 @@ app.listen(port, function(){...});
 </code></pre><p>  As shown the <code>&lt;%= %&gt;</code> can be regarded as template so that make the html file <strong>Dynamic</strong></p>
 </li>
 <li><ol>
-<li><code>&lt;%= %&gt;</code></li>
-<li><code>&lt;%  %&gt;</code></li>
+<li><code>&lt;%= %&gt;</code>  –&gt; for single JS sentence</li>
+<li><code>&lt;%  %&gt;</code>  –&gt; for if/for sentence</li>
+<li><code>&lt;%- %&gt;</code>  –&gt; to include partials(header &amp; footer in ejs)</li>
 </ol>
+</li>
+<li><p>Styles &amp; Partials</p>
+<ul>
+<li>The generic flow is:<ol>
+<li>Make new file <em>xxx.css</em> in new directory public</li>
+<li>Make a directory in <em>views</em> called <em>partials</em>. Inside of it, create two files <em>header.ejs</em> and <em>footer.ejs</em> served as template HTML for other ejs files.</li>
+<li>For styling, link the css file in the header. Next, inclued the header and footer in other pages which needs to using <code>&lt;%- include (&quot;partials/header&quot;) %&gt;</code></li>
+</ol>
+</li>
+<li>Tips<ol>
+<li>To tell the express to serve the files in the <em>public</em> directory (xxx.css), it should be added into <em>app.js</em> that <code>app.use(express.static(&quot;public&quot;));</code></li>
+<li>For including <em>xxx.css</em> in <em>header.ejs</em> file, we cannot just using link as <em>xxx.css</em>, instead using <em>/xxx.css</em>. <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/app.css&quot;&gt;</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Post &amp; Request</p>
+<p>  Example:</p>
+<pre><code>  // in app.js
+  app.post(&quot;/xxx&quot;, function(req,res){
+      var something = req.body.NAME;
+      res.send(&quot;SOME MESSAGE&quot;);
+      // OR / AND
+      res.redirect(&quot;/OTHER SUBTITLE&quot;);
+  });
+
+  // in ejs file
+  &lt;form action=&quot;/xxx&quot; method=&quot;POST&quot;&gt;
+      &lt;input type=&quot;text&quot; name=&quot;NAME&quot;&gt;
+      &lt;button&gt;MESSAGE&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><ul>
+<li><p>Intro </p>
+<ul>
+<li>Application Programming Interface</li>
+<li>Write your code with other’s codes</li>
+<li>Definition</li>
+</ul>
+</li>
+<li><p>Web API’s</p>
+<ul>
+<li>Generally communicate via HTTP</li>
+</ul>
+</li>
+<li><p>API Data Format</p>
+<ul>
+<li>JSON<ul>
+<li>Javascript Object Notation</li>
+<li>looks same as JavaScript objects, with everything being string.</li>
+<li><pre><code>{
+  &quot;person&quot;: {
+      &quot;age&quot;: &quot;21&quot;,
+      &quot;name&quot;: &quot;James&quot;,
+      &quot;city&quot;: &quot;Cleveland&quot;
+  }
+}
+</code></pre></li>
+</ul>
+</li>
+<li>XML<ul>
+<li>Extended Markup Language</li>
+<li>simialr to HTML syntax. But it does not describe presentation, instead it use the tags to encode the key value pair.</li>
+<li><pre><code>&lt;person&gt;
+  &lt;age&gt;21&lt;/age&gt;
+  &lt;name&gt;James&lt;/age&gt;
+  &lt;city&gt;Cleveland&lt;/city&gt;
+&lt;Person&gt;
+</code></pre></li>
+</ul>
 </li>
 </ul>
 </li>
