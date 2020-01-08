@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Dec 30 2019 15:44:33 GMT-0800">
-        <meta property="article:modified_time" content="Sun Jan 05 2020 21:55:21 GMT-0800">
+        <meta property="article:modified_time" content="Tue Jan 07 2020 18:53:33 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://pandasong.cn/2019/12/30/Web-develop-Backend/index.html",
     "headline": "Web-develop-Backend",
     "datePublished": "Mon Dec 30 2019 15:44:33 GMT-0800",
-    "dateModified": "Sun Jan 05 2020 21:55:21 GMT-0800",
+    "dateModified": "Tue Jan 07 2020 18:53:33 GMT-0800",
     "author": {
         "@type": "Person",
         "name": "PanDasong",
@@ -682,8 +682,17 @@ app.listen(port, function(){...});
 <ul>
 <li>Install</li>
 <li>When using it, start server and terminal</li>
-<li>Basic Command<br>  command | function | syntax<br>  :-: | :-: | :-:<br>  mongod | start server | <code>./mongod</code><br>  mongo | start teminal | <code>mongo</code><br>  show dbs |show all data collections | <code>show dbs</code><br>  use | create / get into collection | <code>use collectionA</code><br>  insert | create new data | <code>db.collectionA.insert(&quot;xxx&quot;)</code><br>  find | find all / specific data | <code>db.collectionA.find(&quot;xxx&quot;)</code><br>  update | update data | <code>....update({keyForFindData},{$set: {DataBeChanged}})</code><br>  remove | remove data | <code>db.collectionA.remove({keyForFindData})</code></li>
+<li>Basic Command<br>  command | function | syntax<br>  :-: | :-: | :-:<br>  mongod | start server | <code>./mongod</code><br>  mongo | start teminal | <code>mongo</code><br>  show dbs |show all data collections | <code>show dbs</code><br>  use | create / get into collection | <code>use collectionA</code><br>  insert | create new data | <code>db.collectionA.insert(&quot;xxx&quot;)</code><br>  find | find all / specific data | <code>db.collectionA.find(&quot;xxx&quot;)</code><br>  update | update data | <code>....update({keyForFindData},{$set: {DataBeChanged}})</code><br>  remove | remove data | <code>db.collectionA.remove({keyForFindData})</code><br>  drop | delete collection | <code>db.collection.drop()</code></li>
 <li>Mongoose</li>
+</ul>
+</li>
+<li><p>RESTful Route</p>
+<ul>
+<li>REST: Representational State Transfer</li>
+<li><p>A pattern to define our routes. A mapping between HTTP and CRUD</p>
+</li>
+<li><p>name | url | verb | description<br>:-: | :-: | :-: | :-:<br>INDEX | /dog | GET | Display a list of all<br>NEW | /dogs/new | GET | Display a form to make a new dog<br>CREATE | /dogs | POST | Add new dog to DB<br>SHOW | /dogs/:id | GET | shows info about one dog</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -965,6 +974,11 @@ It will not impact the appearance and can give developers a lot of support :)
         <!--Copyright-->
         <div id="copyright">
             Copyright&nbsp;©&nbsp;<span year></span>&nbsp;pandasong的博客
+            
+                <br>
+                
+                    <a href="http://beian.miit.gov.cn/" rel="nofollow">鄂ICP备20000616号-1</a>
+                
             
         </div>
 
