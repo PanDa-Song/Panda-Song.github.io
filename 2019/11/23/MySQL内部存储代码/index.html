@@ -46,7 +46,7 @@
     
     <title>
         
-            centos7 安装 python3.7 | 
+            MySQL内部存储代码 | 
         
         pandasong的博客
     </title>
@@ -218,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="pandasong的博客">
-    <meta name="msapplication-starturl" content="http://pandasong.cn/2019/03/29/centos7 安装 python3.7/">
+    <meta name="msapplication-starturl" content="http://pandasong.cn/2019/11/23/MySQL内部存储代码/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="pandasong的博客">
@@ -233,16 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://pandasong.cn/2019/03/29/centos7 安装 python3.7/">
+    <meta property="og:url" content="http://pandasong.cn/2019/11/23/MySQL内部存储代码/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="centos7 安装 python3.7 | pandasong的博客">
+    <meta property="og:title" content="MySQL内部存储代码 | pandasong的博客">
     <meta property="og:image" content="/img/g_dragon.jpg">
     <meta property="og:description" content>
     
 
     
-        <meta property="article:published_time" content="Fri Mar 29 2019 18:23:34 GMT-0700">
-        <meta property="article:modified_time" content="Wed Jan 01 2020 21:31:26 GMT-0800">
+        <meta property="article:published_time" content="Sat Nov 23 2019 20:50:34 GMT-0800">
+        <meta property="article:modified_time" content="Fri Feb 28 2020 15:09:05 GMT-0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html">
+        <link rel="canonical" href="http://pandasong.cn/2019/11/23/MySQL内部存储代码/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html",
-    "headline": "centos7 安装 python3.7",
-    "datePublished": "Fri Mar 29 2019 18:23:34 GMT-0700",
-    "dateModified": "Wed Jan 01 2020 21:31:26 GMT-0800",
+    "mainEntityOfPage": "http://pandasong.cn/2019/11/23/MySQL内部存储代码/index.html",
+    "headline": "MySQL内部存储代码",
+    "datePublished": "Sat Nov 23 2019 20:50:34 GMT-0800",
+    "dateModified": "Fri Feb 28 2020 15:09:05 GMT-0800",
     "author": {
         "@type": "Person",
         "name": "PanDasong",
@@ -348,7 +348,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-下载"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-解压安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 解压安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-编译"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 编译</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-建立python3软链，并将python3加入PATH"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 建立python3软链，并将python3加入PATH</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-安装完成"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 安装完成</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MySQL内部存储代码"><span class="post-toc-number">1.</span> <span class="post-toc-text">MySQL内部存储代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#存储过程"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">存储过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#触发器"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">触发器</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -380,7 +380,7 @@
         
     
             <p class="article-headline-p">
-                centos7 安装 python3.7
+                MySQL内部存储代码
             </p>
         </div>
 
@@ -399,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>PanDasong</strong>
-        <span>3月 29, 2019</span>
+        <span>11月 23, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -431,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=centos7 安装 python3.7&url=http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html&pic=http://pandasong.cn/img/g_dragon.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MySQL内部存储代码&url=http://pandasong.cn/2019/11/23/MySQL内部存储代码/index.html&pic=http://pandasong.cn/img/g_dragon.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -452,7 +452,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=centos7 安装 python3.7&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/03/29/centos7 安装 python3.7/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=MySQL内部存储代码&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/11/23/MySQL内部存储代码/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -471,39 +471,50 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p>官网 <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a> ，选择source code版本下载到linux本地</p>
-<h3 id="2-解压安装"><a href="#2-解压安装" class="headerlink" title="2. 解压安装"></a>2. 解压安装</h3><p>先建立安装目录<br><code>#mkdir -p /usr/local/python3</code> (用root身份)</p>
-<p>将刚刚下载的python的tar文件解压到此<br><code>#tar -zxvf Python-3.7.3.tgz</code></p>
-<h3 id="3-编译"><a href="#3-编译" class="headerlink" title="3. 编译"></a>3. 编译</h3><p>进入解压后的目录<br><code>#cd Python-3.7.3</code><br>编译安装前安装一个包，否则pip的安装会报错<br><code>#yum install libffi-devel -y</code><br>编译安装<br><code>#.configure --prefix=/usr/local/python3</code><br><code>#make</code><br><code>#make install</code></p>
-<h3 id="4-建立python3软链，并将python3加入PATH"><a href="#4-建立python3软链，并将python3加入PATH" class="headerlink" title="4. 建立python3软链，并将python3加入PATH"></a>4. 建立python3软链，并将python3加入PATH</h3><p>建立python3软链<br><code>#ln -s /usr/local/python3/bin/python3 /usr/bin/python3</code><br>用vim修改PATH文件</p>
-<pre><code class="bash"># vim ~/.bash_profile
-(以下是文件内容)
-# .bash_profile
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-. ~/.bashrc
-fi
-# User specific environment and startup programs
-PATH=$PATH:$HOME/bin:/usr/local/python3/bin
-export PATH
-</code></pre>
-<p>执行如下命令使其生效<br><code>#source ~/.bash_profile</code></p>
-<h3 id="5-安装完成"><a href="#5-安装完成" class="headerlink" title="5. 安装完成"></a>5. 安装完成</h3><p>检查安装情况</p>
-<pre><code>#python3 -V
-python-3.7.3
-#pip3 -V
-pip-19.0.3  from ...
-</code></pre><p>但是，由于linux系统安装是自带有python2，所以即使此时python3已经安装完毕，在终端输入python仍然会进入的是系统自带的python2，只有输入python3才能进入python3编译器，因此为了之后使用的方便，可以适当的建立软链接来改善。</p>
-<pre><code>#ln -s /usr/local/python3/bin/python3 /usr/bin/python
-# ln -s /usr/local/python3/bin/pip3 /usr/bin/pip
-</code></pre><p>改完之后，由于linux下yum系统借助的是自带的python，所以改成3.7后会导致yum无法正常使用。需要进行修改如下：</p>
-<pre><code>#vim /usr/bin/yum
-修改第一行Python为Python2.7
-</code></pre><p>Reference：</p>
+        <h1 id="MySQL内部存储代码"><a href="#MySQL内部存储代码" class="headerlink" title="MySQL内部存储代码"></a>MySQL内部存储代码</h1><p>MySQL总共有四种方式用于存储代码，分别是触发器(trigger)，存储过程(stored procedure)，存储函数(stored function)以及5.1开始，可以在定时任务中存放代码，被称为“事件”。其中存储过程和存储函数统称为<strong>存储程序</strong>，他俩可以实现传入参数并返回值，但另外两种则不行。</p>
+<p>存储代码优点：</p>
 <ol>
-<li><a href="http://www.cnblogs.com/kimyeee/p/7250560.html" target="_blank" rel="noopener">博客园–_至尊宝</a></li>
-<li><a href="https://blog.csdn.net/qq_36416904/article/details/79316972" target="_blank" rel="noopener">CSDN博客–海棠未满</a></li>
+<li>服务器内部执行，离数据最近，节省带宽和网络延迟</li>
+<li>实现代码重用，方便统一业务规则，保持某些行为总是一致</li>
+<li>简化代码的维护和版本更新</li>
+<li>服务器端可以缓存存储过程的执行计划，对于需要反复调用的过程，大大降低消耗</li>
+<li>在服务器端部署，备份和维护都可以在服务器端完成，不需要外部依赖</li>
+<li>数据库开发与应用开发合理分工</li>
 </ol>
+<p>存储代码缺点：</p>
+<ol>
+<li>MySQL本身没有好用的开发和调试工具，给编写存储代码带来了困难</li>
+<li>比起普通的代码，效率较差，难以实现较复杂的逻辑</li>
+<li>存储程序部署在服务器内部，带来一定安全隐患</li>
+<li>给数据库服务器带来压力</li>
+<li>MySQL无法控制存储程序的资源消耗，如果代码出错容易造成服务器崩溃</li>
+<li>限制较多，调试困难</li>
+</ol>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>存储过程是一组为了完成特定功能的SQL语句，经过预编译后存储在数据库中，需要时调用他并传入参数来实现特定功能。</p>
+<p>其优势和上述总体优点类似。</p>
+<pre><code class="SQL">DROP PROCEDUE IF EXIST insert_many_rows;
+
+delimiter //
+
+CREATE PROCEDURE insert_many_rows (IN loops INT)
+BEGIN
+    DECLARE v1 INT;
+    SET v1=loops;
+    WHILE v1 &gt; 0 DO
+        INSERT INTO test_table values(NULL,0,
+        &#39;qqqqqqqqqqqwwwwwwweeeeeeeeerrrrrrrrrrtttttttttt&#39;,
+        &#39;qqqqqqqqqqqwwwwwwweeeeeeeeerrrrrrrrrrtttttttttt&#39;       );
+        SET v1 = v1 - 1;
+    END
+END
+//
+
+delimiter
+</code></pre>
+<h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h2><p>触发器可以用于在执行INSERT, UPDATE, DELETE时执行一些特定的操作。触发器本身没有返回值，但他能够改变出发SQL语句所影响的数据。</p>
+<p>触发器能够减少客户端和服务器之间的通信，所以可以简化应用逻辑，提高性能。也可用于自动更新反范式化数据或者汇总表数据。</p>
+<p>实际上，触发器可以理解为一个隐藏的存储过程，不需要参数，不需要显示调用，它包含了很多看不见的工作，掩盖了服务器背后的工作。另外，触发器是“基于行的出发”，也就是针对一条记录，若变更的数据很大，效率会比较低。因此，尽量少使用触发器，大部分的功能都能通过存储过程来实现。</p>
+<p>触发器涉及到复杂的逻辑时，很可能导致死锁和锁等待，若触发器失败，那么原来的SQL语句也会失败，并且触发器产生的问题比较难排查，难以分析服务器抛出的错误代码。</p>
 
         
     
@@ -524,7 +535,7 @@ pip-19.0.3  from ...
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/05/02/2019-5-2_OOP_learn/" id="post_nav-newer" class="prev-content">
+        <a href="/2019/12/20/Web-devlop-JavaScript/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -538,7 +549,7 @@ pip-19.0.3  from ...
 
     <!-- Next Nav -->
     
-        <a href="/2019/03/13/windows7下用Hexo+github建立博客/" id="post_nav-older" class="next-content">
+        <a href="/2019/10/01/memory-of-games/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
