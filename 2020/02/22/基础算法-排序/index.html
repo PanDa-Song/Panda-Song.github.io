@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Sat Feb 22 2020 18:22:36 GMT-0800">
-        <meta property="article:modified_time" content="Sun Mar 01 2020 15:05:34 GMT-0800">
+        <meta property="article:modified_time" content="Thu Mar 26 2020 18:19:55 GMT-0700">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://pandasong.cn/2020/02/22/基础算法-排序/index.html",
     "headline": "基础算法--排序",
     "datePublished": "Sat Feb 22 2020 18:22:36 GMT-0800",
-    "dateModified": "Sun Mar 01 2020 15:05:34 GMT-0800",
+    "dateModified": "Thu Mar 26 2020 18:19:55 GMT-0700",
     "author": {
         "@type": "Person",
         "name": "PanDasong",
@@ -499,7 +499,7 @@
             arr[index + 1] = arr[index];
             index --;
         }
-        arr[index + 1] = arr[i];
+        arr[index + 1] = insertVal;
     }
 }
 </code></pre>
@@ -526,7 +526,31 @@
     return nums;
 }
 </code></pre>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a>Quick Sort</h2><h2 id="Priority-Queue"><a href="#Priority-Queue" class="headerlink" title="Priority Queue"></a>Priority Queue</h2><h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h2><h2 id="Comb-Sort"><a href="#Comb-Sort" class="headerlink" title="Comb Sort"></a>Comb Sort</h2>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a>Quick Sort</h2><pre><code class="Java">public static int[] qsort(int arr[],int start,int end) {        
+    int pivot = arr[start];        
+    int i = start;        
+    int j = end;        
+    while (i&lt;j) {            
+        while ((i&lt;j)&amp;&amp;(arr[j]&gt;pivot)) {                
+            j--;            
+        }            
+        while ((i&lt;j)&amp;&amp;(arr[i]&lt;pivot)) {                
+            i++;            
+        }            
+        if ((arr[i]==arr[j])&amp;&amp;(i&lt;j)) {                
+            i++;            
+        } else {                
+            int temp = arr[i];                
+            arr[i] = arr[j];                
+            arr[j] = temp;            
+        }        
+    }        
+    if (i-1&gt;start) arr=qsort(arr,start,i-1);        
+    if (j+1&lt;end) arr=qsort(arr,j+1,end);        
+    return (arr);    
+}    
+</code></pre>
+<h2 id="Priority-Queue"><a href="#Priority-Queue" class="headerlink" title="Priority Queue"></a>Priority Queue</h2><h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h2><h2 id="Comb-Sort"><a href="#Comb-Sort" class="headerlink" title="Comb Sort"></a>Comb Sort</h2>
         
     
 
