@@ -1,477 +1,147 @@
-<!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.6 -->
-    <script>
-        window.materialVersion = "1.5.6"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0',
-            '1.5.2',
-            '1.5.5'
-        ]
-    </script>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Web Develop Intro | pandasong的博客</title><meta name="author" content="PanDasong"><meta name="copyright" content="PanDasong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="IntroHTML HyperText Markup Language Define the structure of a webpage ‘noun’ of webpageCSS Cascading Style Sheets Define the style of HTML ‘adj’ of webpageJavaScript Adds logic and interactivity to a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web Develop Intro">
+<meta property="og:url" content="http://pandasong.cn/2019/09/27/Web-develop-intro/index.html">
+<meta property="og:site_name" content="pandasong的博客">
+<meta property="og:description" content="IntroHTML HyperText Markup Language Define the structure of a webpage ‘noun’ of webpageCSS Cascading Style Sheets Define the style of HTML ‘adj’ of webpageJavaScript Adds logic and interactivity to a">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pandasong.cn/img/g_dragon.jpg">
+<meta property="article:published_time" content="2019-09-27T22:44:06.000Z">
+<meta property="article:modified_time" content="2020-01-02T05:55:45.185Z">
+<meta property="article:author" content="PanDasong">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pandasong.cn/img/g_dragon.jpg"><link rel="shortcut icon" href="/img/g_dragon.jpg"><link rel="canonical" href="http://pandasong.cn/2019/09/27/Web-develop-intro/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: true
+};
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
 
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
 
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
 
-
-
-
-
-
-
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-            Web Develop Intro | 
-        
-        pandasong的博客
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/g_dragon.jpg">
-    <link rel="icon" href="/img/g_dragon.jpg">
-
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content>
-    <meta name="keywords" content>
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-            
-                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-            
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
   }
-  
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-01-01 21:55:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  a {
-    color: #00838F;
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
   }
 
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-image: url(/img/milkyway.jpg);
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
       }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="pandasong的博客">
-    <meta name="msapplication-starturl" content="http://pandasong.cn/2019/09/27/Web-develop-intro/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="pandasong的博客">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/g_dragon.jpg">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://pandasong.cn/2019/09/27/Web-develop-intro/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Web Develop Intro | pandasong的博客">
-    <meta property="og:image" content="/img/g_dragon.jpg">
-    <meta property="og:description" content>
-    
-
-    
-        <meta property="article:published_time" content="Fri Sep 27 2019 15:44:06 GMT-0700">
-        <meta property="article:modified_time" content="Wed Jan 01 2020 21:55:45 GMT-0800">
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="http://pandasong.cn/2019/09/27/Web-develop-intro/index.html">
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://pandasong.cn/2019/09/27/Web-develop-intro/index.html",
-    "headline": "Web Develop Intro",
-    "datePublished": "Fri Sep 27 2019 15:44:06 GMT-0700",
-    "dateModified": "Wed Jan 01 2020 21:55:45 GMT-0800",
-    "author": {
-        "@type": "Person",
-        "name": "PanDasong",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/g_dragon.jpg"
-        },
-        "description": "人生得意须尽欢，莫使金樽空对月"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "pandasong的博客",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/g_dragon.jpg"
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
         }
-    },
-    "keywords": "",
-    "description": "",
-}
-</script>
-
-
-    
-
-    <!-- Analytics -->
-    
-    
-    
-
-    <!-- Custom Head -->
-    
-
-</head>
-
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span id="MD-burger-id" class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Post TOC -->
-
-    
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
-
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">HTML</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">CSS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">JavaScript</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTML-1"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">HTML</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#intro"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Basic-tags"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Basic tags</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Html-List"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Html List</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Divs-and-Spans"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Divs and Spans</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Attributes"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Attributes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tables"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Tables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Forms"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">Forms</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Labels"><span class="post-toc-number">1.1.8.</span> <span class="post-toc-text">Labels</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS-1"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CSS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intro-1"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intermediate-CSS"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Intermediate CSS</span></a></li></ol></li></ol>
-    </ul>
-    
-
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
-    
-            <p class="article-headline-p">
-                Web Develop Intro
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/g_dragon.jpg" width="44px" height="44px" alt="Author Avatar">
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>PanDasong</strong>
-        <span>9月 27, 2019</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Web Develop Intro&url=http://pandasong.cn/2019/09/27/Web-develop-intro/index.html&pic=http://pandasong.cn/img/g_dragon.jpg&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=pandasong的博客&title=Web Develop Intro&summary=&pics=http://pandasong.cn/img/g_dragon.jpg&url=http://pandasong.cn/2019/09/27/Web-develop-intro/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
-    
-</div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ul>
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/g_dragon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number">1.0.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number">1.0.2.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.0.3.</span> <span class="toc-text">JavaScript</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-1"><span class="toc-number">1.1.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#intro"><span class="toc-number">1.1.1.</span> <span class="toc-text">intro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-tags"><span class="toc-number">1.1.2.</span> <span class="toc-text">Basic tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Html-List"><span class="toc-number">1.1.3.</span> <span class="toc-text">Html List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Divs-and-Spans"><span class="toc-number">1.1.4.</span> <span class="toc-text">Divs and Spans</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attributes"><span class="toc-number">1.1.5.</span> <span class="toc-text">Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tables"><span class="toc-number">1.1.6.</span> <span class="toc-text">Tables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Forms"><span class="toc-number">1.1.7.</span> <span class="toc-text">Forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Labels"><span class="toc-number">1.1.8.</span> <span class="toc-text">Labels</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-1"><span class="toc-number">1.2.</span> <span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Intro-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Intermediate-CSS"><span class="toc-number">1.2.2.</span> <span class="toc-text">Intermediate CSS</span></a></li></ol></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">pandasong的博客</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Web Develop Intro</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-27T22:44:06.000Z" title="发表于 2019-09-27 15:44:06">2019-09-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-01-02T05:55:45.185Z" title="更新于 2020-01-01 21:55:45">2020-01-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B/">课程</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B/%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE/">全栈项目</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ul>
 <li>HyperText Markup Language</li>
 <li>Define the structure of a webpage</li>
 <li>‘noun’ of webpage<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3></li>
@@ -482,7 +152,7 @@
 <li>‘verbs’ of webpage</li>
 </ul>
 <hr>
-<h2 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h2><h3 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h3><p>General Rule:</p><p><br>    <code>&lt;tagname&gt; Some Content &lt;/tagname&gt;</code></p>
+<h2 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h2><h3 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h3><p>General Rule:<p><br>    <code>&lt;tagname&gt; Some Content &lt;/tagname&gt;</code></p>
 <p>But Every HTML documents will start with this boilerplate:</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -493,41 +163,37 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-
-</code></pre><p>In sublime, type ‘html’ following a Tab this structure will appear.</p><p></p>
-<h3 id="Basic-tags"><a href="#Basic-tags" class="headerlink" title="Basic tags"></a>Basic tags</h3><p>Comment: <code>&lt;!-- xxxx --&gt;</code>(cltr+/)</p><p><br>Line break: <code>&lt;p&gt;</code></p><p><br>Bold: <code>&lt;b&gt; or &lt;strong&gt;</code></p><p><br>Italic: <code>&lt;i&gt; or &lt;em&gt;(emphasis)</code></p>
+</code></pre>
+<p>In sublime, type ‘html’ following a Tab this structure will appear.<p></p>
+<h3 id="Basic-tags"><a href="#Basic-tags" class="headerlink" title="Basic tags"></a>Basic tags</h3><p>Comment: <code>&lt;!-- xxxx --&gt;</code>(cltr+/)<p><br>Line break: <code>&lt;p&gt;</code><p><br>Bold: <code>&lt;b&gt; or &lt;strong&gt;</code><p><br>Italic: <code>&lt;i&gt; or &lt;em&gt;(emphasis)</code></p>
 <h3 id="Html-List"><a href="#Html-List" class="headerlink" title="Html List"></a>Html List</h3><ul>
 <li>Order list(with number)<pre><code class="html">&lt;ol&gt;
   &lt;li&gt;apple&lt;/li&gt;
   &lt;li&gt;orange&lt;/li&gt;
   &lt;li&gt;peer&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
+&lt;/ol&gt;</code></pre>
 </li>
 <li>Unorder list(with bold points)<pre><code class="html">&lt;ul&gt;
   &lt;li&gt;apple&lt;/li&gt;
   &lt;li&gt;orange&lt;/li&gt;
   &lt;li&gt;peer&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+&lt;/ul&gt;</code></pre>
 </li>
 </ul>
 <h3 id="Divs-and-Spans"><a href="#Divs-and-Spans" class="headerlink" title="Divs and Spans"></a>Divs and Spans</h3><p>#TODO</p>
 <h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><p>Adding addtional information to tags</p>
 <pre><code class="html">&lt;!-- Genaral Format--&gt;
-&lt;tag name=&quot;value&quot;&gt;&lt;/tag&gt;
-</code></pre>
+&lt;tag name=&quot;value&quot;&gt;&lt;/tag&gt;</code></pre>
 <ul>
-<li>Image: <p><br><code>&lt;img src=&quot;panda.png&quot;&gt;</code></p></li>
+<li>Image: <p><br><code>&lt;img src=&quot;panda.png&quot;&gt;</code></li>
 <li>Links: <p><pre><code class="html">&lt;a href=&quot;url&quot;&gt;Link Text&lt;/a&gt;
 &lt;!-- Format --&gt;
 &lt;!-- Examples Below --&gt;
 &lt;!-- Absolute PATH--&gt;
 &lt;a href=&quot;http://www.google.com&quot;&gt;Clich here to Google&lt;/a&gt;
 &lt;!-- Relative PATH--&gt;
-&lt;a href=&quot;Page2.html&quot;&gt;Clich here to Page2&lt;/a&gt;
-</code></pre>
-</p></li>
+&lt;a href=&quot;Page2.html&quot;&gt;Clich here to Page2&lt;/a&gt;</code></pre>
+</li>
 </ul>
 <h3 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h3><pre><code class="html">&lt;table&gt;
     &lt;thead&gt;
@@ -542,27 +208,25 @@
             &lt;th&gt;&lt;/th&gt;
         &lt;tr&gt;
     &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
+&lt;/table&gt;</code></pre>
 <h3 id="Forms"><a href="#Forms" class="headerlink" title="Forms"></a>Forms</h3><ul>
-<li><p>The \<form>tag <p><br>container of inputs</p>
+<li><p>The &lt;form&gt;tag <p><br>container of inputs</p>
 <pre><code class="html">&lt;form action=&quot;/my-form-submitting-page&quot; method=&quot;post&quot;&gt;
   &lt;!-- All inputs will go in here --&gt;
-&lt;/form&gt;
-</code></pre>
-</form></p></li>
+&lt;/form&gt;</code></pre>
+</li>
 <li><p>action - the URL to send from data to</p>
 </li>
-<li>method - the type of HTTP request<br>will illustrate in BackEnd</li>
+<li><p>method - the type of HTTP request<br>will illustrate in BackEnd</p>
+</li>
 </ul>
 <ul>
-<li>The \<input> tag <p><br>create interactive controls. The “type” attribute determines the type of input<pre><code class="html">&lt;input type=&quot;text&quot;&gt;
+<li>The &lt;input&gt; tag <p><br>create interactive controls. The “type” attribute determines the type of input<pre><code class="html">&lt;input type=&quot;text&quot;&gt;
 &lt;input type=&quot;date&quot;&gt;
 &lt;input type=&quot;color&quot;&gt;
 &lt;input type=&quot;file&quot;&gt;
-&lt;input type=&quot;checkbox&quot;&gt;
-</code></pre>
-</p></li>
+&lt;input type=&quot;checkbox&quot;&gt;</code></pre>
+</li>
 </ul>
 <p><strong>A simple form example:</strong></p>
 <pre><code class="html">&lt;h1&gt;Sign in&lt;/h1&gt;
@@ -578,9 +242,8 @@
         &lt;button&gt;
             Log in
         &lt;/button&gt;
-    &lt;/form&gt;
-</code></pre>
-<h3 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h3><p><strong>Showed above</strong></p><p><br>Syntax:</p>
+    &lt;/form&gt;</code></pre>
+<h3 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h3><p><strong>Showed above</strong><p><br>Syntax:</p>
 <pre><code class="html">&lt;!-- first type (normal type) --&gt;
 
 &lt;label&gt;
@@ -591,11 +254,8 @@
 &lt;!-- other type of syntax using &#39;for&#39; and &#39;id&#39;--&gt;
 
 &lt;label for=&quot;username&quot;&gt;Username: &lt;/label&gt;
-&lt;input id=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;Account&quot;&gt;
-</code></pre>
-<p><label for="username">Username: </label></p>
-<input id="username" type="text" placeholder="Account">
-
+&lt;input id=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;Account&quot;&gt;</code></pre>
+<p><label for="username">Username: </label><br><input id="username" type="text" placeholder="Account"></p>
 <hr>
 <h2 id="CSS-1"><a href="#CSS-1" class="headerlink" title="CSS"></a>CSS</h2><h3 id="Intro-1"><a href="#Intro-1" class="headerlink" title="Intro"></a>Intro</h3><ul>
 <li><p>Cascading Style Sheets</p>
@@ -605,65 +265,63 @@
 </ul>
 </li>
 <li><p>General Rule</p>
-<pre><code class="css">  selctor {
-      property: value;
-      anotherProperty: value;
-  }
-</code></pre>
+<pre><code class="css">selctor &#123;
+    property: value;
+    anotherProperty: value;
+&#125;</code></pre>
 <p>  Examples: </p>
-<pre><code class="css">  /*Make all h1 purple and 56px font*/
-  h1 {
-      color: purple;
-      font-size: 56px;
-  }
-  /*Give all image a 3px red border*/
-  img {
-      border-color: red;
-      border-width: 3px;
-  }
-</code></pre>
+<pre><code class="css">/*Make all h1 purple and 56px font*/
+h1 &#123;
+    color: purple;
+    font-size: 56px;
+&#125;
+/*Give all image a 3px red border*/
+img &#123;
+    border-color: red;
+    border-width: 3px;
+&#125;</code></pre>
 </li>
 <li><p>Where to put CSS</p>
 <ul>
 <li>inline(not good: need to edit for every elements, we want to seperate CSS and html)</li>
-<li>Style tag<br>  General rule:<pre><code class="html">  &lt;style type=&quot;text/css&quot;&gt;
-      selector {
-          property: value;
-      }
-  &lt;/style&gt;
-</code></pre>
-<strong>Both above are not definately seperate CSS and HTML, so using another way.</strong></li>
-<li><p>Write CSS in a seperate CSS file (using \<link> tage):</p>
+<li>Style tag<br>  General rule:<pre><code class="html">&lt;style type=&quot;text/css&quot;&gt;
+    selector &#123;
+        property: value;
+    &#125;
+&lt;/style&gt;</code></pre>
+</li>
+</ul>
+<p>  <strong>Both above are not definately seperate CSS and HTML, so using another way.</strong></p>
+<ul>
+<li><p>Write CSS in a seperate CSS file (using &lt;link&gt; tage):</p>
 <p><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;app.css&quot;&gt;</code>(in html file)</p>
 </li>
 </ul>
 </li>
 <li><p>Color in CSS</p>
 <ol>
-<li>Hexadecimal(16 number):<p><br> # + String of 6 hexadecimal numbers(from 0 - F)</p><p><br> first two digits –&gt; how much red;</p><p><br> next two digits –&gt; how much green;</p><p><br> last two digits –&gt; how much blue;</p><p><br> Generally using <strong>color picker</strong></p></li>
-<li>RGB:<p><br> 3 channels: Red, Green, Blue. Each ranges from 0-255</p><p><br> <code>color: rgb(0, 255, 0);</code></p></li>
-<li>RGBA:<p><br> just like RGB, but with an alpha(transparency) channel from 0.0 - 1.0(lower means sligter)</p><p><br> <code>color: rgba(11, 99, 150, 1);</code></p></li>
+<li>Hexadecimal(16 number):<p><br> # + String of 6 hexadecimal numbers(from 0 - F)<p><br> first two digits –&gt; how much red;<p><br> next two digits –&gt; how much green;<p><br> last two digits –&gt; how much blue;<p><br> Generally using <strong>color picker</strong></li>
+<li>RGB:<p><br> 3 channels: Red, Green, Blue. Each ranges from 0-255<p><br> <code>color: rgb(0, 255, 0);</code></li>
+<li>RGBA:<p><br> just like RGB, but with an alpha(transparency) channel from 0.0 - 1.0(lower means sligter)<p><br> <code>color: rgba(11, 99, 150, 1);</code></li>
 </ol>
 </li>
 <li><p>Background and Border</p>
 <ul>
 <li><p>Background</p>
 <ul>
-<li>color:<p><br><code>background: rgb(255, 0, 0);</code></p></li>
+<li>color:<p><br><code>background: rgb(255, 0, 0); </code></li>
 <li>image:<p><pre><code class="CSS">background: url(image address)
 background-repeat: no-repeat;
-background-size: cover;
-</code></pre>
-</p></li>
+background-size: cover;</code></pre>
+</li>
 </ul>
 </li>
-<li><p>Border</p><p><br>  Three parts:</p>
+<li><p>Border<p><br>  Three parts:</p>
 <pre><code>  1. width
   2. color
-  3. style
-</code></pre><pre><code class="CSS">  /*Syntax: color width style */
-  board: purple 5px solid;
-</code></pre>
+  3. style</code></pre>
+<pre><code class="CSS">/*Syntax: color width style */
+board: purple 5px solid;</code></pre>
 </li>
 </ul>
 </li>
@@ -671,13 +329,11 @@ background-size: cover;
 <ul>
 <li><strong>Element Selector</strong>: Select all instances of a given element</li>
 <li><strong>ID Selector</strong>: Select an element with a given ID. One ID can be only <strong>once</strong> in one page.<pre><code class="html">&lt;!--html file--&gt;
-&lt;li id=&quot;special&quot;&gt;
-</code></pre>
+&lt;li id=&quot;special&quot;&gt;</code></pre>
 <pre><code class="CSS">/*CSS file*/
-#special{
+#special&#123;
 background: yellow;
-}
-</code></pre>
+&#125;</code></pre>
 </li>
 <li><strong>Class Selector</strong>: Similar to ID, but change the word ID to class and <strong>‘#’</strong> to <strong>‘.’</strong></li>
 </ul>
@@ -739,446 +395,4 @@ background: yellow;
 </ul>
 </li>
 </ul>
-
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2019/10/01/memory-of-games/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2019/05/07/算法入门/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
-    </div>
-
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/g_dragon.jpg" alt="PanDasong's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="panda.song749@gmail.com" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">一月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a>
-            </li></ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/MySQL/">MySQL<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/个人随想/">个人随想<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/入门/">入门<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构与算法/">数据结构与算法<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/课程/">课程<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/课程/Java项目/">Java项目<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/课程/全栈项目/">全栈项目<span class="sidebar_archives-count">3</span></a>
-            </li></ul>
-        </li>
-        
-    
-
-    <!-- Pages  -->
-    
-
-    <!-- Article Number  -->
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
-    </div>
-
-    <!-- Sidebar Image -->
-    
-
-</aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-
-    <!-- Facebook -->
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Weibo -->
-    
-        <a href="https://www.weibo.com/u/2358651853" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
-                <span class="visuallyhidden">Weibo</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Instagram -->
-    
-        <a href="https://www.instagram.com/pandasong2635/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
-                <span class="visuallyhidden">Instagram</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/PanDa-Song" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-
-    <!-- V2EX -->
-    
-
-    <!-- Segmentfault -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;pandasong的博客
-            
-                <br>
-                
-                    <a href="http://beian.miit.gov.cn/">鄂ICP备20000616号-1</a>
-                
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
-</footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
-
-
-
-    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
-
-
-
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
-
-    
-        
-            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
-        
-    
-
-
-
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-
-    
-        
-            $(function() {
-                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-                prettyPrint();
-                })
-        
-    
-    
-</script>
-
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    var copyrightNow = new Date().getFullYear();
-    var textContent = document.querySelector('span[year]')
-
-    copyrightSince = 2019;
-    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
-        textContent.textContent = copyrightNow
-    } else {
-        textContent.textContent = copyrightSince + ' - ' + copyrightNow
-    }
-
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        </body>
-    
-</html>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">PanDasong</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://pandasong.cn/2019/09/27/Web-develop-intro/">http://pandasong.cn/2019/09/27/Web-develop-intro/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://pandasong.cn" target="_blank">pandasong的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/g_dragon.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/10/01/memory-of-games/"><img class="prev-cover" src="/" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">memory_of_games</div></div></a></div><div class="next-post pull-right"><a href="/2019/05/07/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/"><img class="next-cover" src="/" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">算法入门</div></div></a></div></nav></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By PanDasong</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="icp"><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"/><span>鄂ICP备20000616号-1</span></a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
